@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Saving Goal</title>
+</head>
+<body>
+  <h2>Create New Saving Goal</h2>
+  <form method="POST" action="/api/saving-goals/">
+    {% csrf_token %}
+    <label for="total-amount">Total Amount:</label>
+    <input type="number" id="total-amount" name="total_amount" required><br><br>
+    <label for="goal-date">Goal Date:</label>
+    <input type="date" id="goal-date" name="goal_date" required><br><br>
+    <input type="submit" value="Create Goal">
+  </form>
+</body>
+</html>
